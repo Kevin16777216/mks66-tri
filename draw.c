@@ -180,13 +180,13 @@ void add_torus(struct matrix *tris,
   {
     if((point+1)%stp != 0){
       add_tri(tris,torus->m[0][point],torus->m[1][point],torus->m[2][point],
-      torus->m[0][point+1],torus->m[1][point+1],torus->m[2][point+1],
-      torus->m[0][point+stp],torus->m[1][point+stp],torus->m[2][point+stp]);
+      torus->m[0][point+stp],torus->m[1][point+stp],torus->m[2][point+stp],
+      torus->m[0][point+1],torus->m[1][point+1],torus->m[2][point+1]);
     }
     if(point%stp != 0 ){
-      add_tri(tris,torus->m[0][point+step],torus->m[1][point+step],torus->m[2][point+step],
-      torus->m[0][point],torus->m[1][point],torus->m[2][point],
-      torus->m[0][point+stp],torus->m[1][point+stp],torus->m[2][point+stp]);
+      add_tri(tris, torus->m[0][point+step],torus->m[1][point+step],torus->m[2][point+step],
+      torus->m[0][point+stp],torus->m[1][point+stp],torus->m[2][point+stp],
+      torus->m[0][point],torus->m[1][point],torus->m[2][point]);
     }
   }
   return;
